@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace Literature {
-	class Poem : IEpic, ILyric {
+namespace LiteratureAbstraction {
+	class Poem : Work, IEpic, ILyric {
 		public List<string> dialogs { get; set; }
 		public List<string> remarks { get; set; }
 		public int countOfEvents { get; }

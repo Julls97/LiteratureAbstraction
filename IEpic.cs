@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Literature {
+namespace LiteratureAbstraction {
 	interface IEpic {
 		// сюжет
 		// повествование о событиях

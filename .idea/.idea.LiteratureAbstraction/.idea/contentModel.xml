@@ -6,6 +6,7 @@
       <e p="Author.cs" t="Include" />
       <e p="Ballad.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="Character.cs" t="Include" />
       <e p="Comedy.cs" t="Include" />
       <e p="Drama.cs" t="Include" />
       <e p="Elegy.cs" t="Include" />
@@ -25,6 +26,7 @@
       <e p="Ode.cs" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Poem.cs" t="Include" />
+      <e p="Program.cs" t="Include" />
       <e p="Story.cs" t="Include" />
       <e p="Tragedy.cs" t="Include" />
       <e p="Work.cs" t="Include" />

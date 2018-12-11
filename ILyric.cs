@@ -1,4 +1,4 @@
-﻿namespace Literature {
+﻿namespace LiteratureAbstraction {
 	interface ILyric {
 		// выражение чувств
 		// размер стиха
