@@ -3,9 +3,18 @@
   <component name="ContentModelStore">
     <e p="C:\Users\Юлия\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_LiteratureAbstraction.-601003205.00" t="ExcludeRecursive" />
     <e p="C:\Users\Юлия\RiderProjects\LiteratureAbstraction" t="IncludeRecursive">
+      <e p="Author.cs" t="Include" />
+      <e p="Ballad.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="Comedy.cs" t="Include" />
+      <e p="Drama.cs" t="Include" />
+      <e p="Elegy.cs" t="Include" />
+      <e p="IDramatic.cs" t="Include" />
+      <e p="IEpic.cs" t="Include" />
+      <e p="ILyric.cs" t="Include" />
       <e p="LiteratureAbstraction.csproj" t="IncludeRecursive" />
       <e p="LiteratureAbstraction.sln" t="IncludeFlat" />
+      <e p="Novel.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp2.0" t="Include">
@@ -13,8 +22,12 @@
           </e>
         </e>
       </e>
+      <e p="Ode.cs" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Program.cs" t="Include" />
+      <e p="Poem.cs" t="Include" />
+      <e p="Story.cs" t="Include" />
+      <e p="Tragedy.cs" t="Include" />
+      <e p="Work.cs" t="Include" />
     </e>
   </component>
 </project>
