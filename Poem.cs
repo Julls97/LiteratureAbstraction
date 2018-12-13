@@ -8,7 +8,7 @@ namespace LiteratureAbstraction {
 		romantic,
 		lyricDramatic
 	}
-	
+
 	class Poem : Work, IEpic, ILyric {
 		public List<string> dialogs { get; set; }
 		public List<string> remarks { get; set; }

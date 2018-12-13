@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace LiteratureAbstraction {
-	class Author {
+	public class Author {
 		public string firstName { get; private set; }
 		public string lastName { get; private set; }
 		public int bday { get; private set; }

@@ -9,6 +9,5 @@ namespace LiteratureAbstraction {
 		List<string> actions { get; set; }
 		List<string> dialogs { get; set; }
 		List<string> remarks { get; set; }
-
 	}
 }

@@ -30,6 +30,7 @@
       <e p="Story.cs" t="Include" />
       <e p="Tragedy.cs" t="Include" />
       <e p="Work.cs" t="Include" />
+      <e p="WorkCollection.cs" t="Include" />
     </e>
   </component>
 </project>

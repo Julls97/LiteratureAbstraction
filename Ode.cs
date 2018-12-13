@@ -12,7 +12,7 @@ namespace LiteratureAbstraction {
 		public string rhyme { get; set; }
 		public override List<Character> characters { get; set; }
 		public OdaTypes odaType { get; set; }
-		
+
 		// Введение рассуждение заключение
 		public string Introduction { get; set; }
 		public string Reasoning { get; set; }
