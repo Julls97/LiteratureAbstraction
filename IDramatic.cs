@@ -10,9 +10,5 @@ namespace LiteratureAbstraction {
 		List<string> dialogs { get; set; }
 		List<string> remarks { get; set; }
 
-		int countOfCharacters { get; }
-		int countOfActions { get; }
-		int countOfDialogs { get; }
-		int countOfRemarks { get; }
 	}
 }

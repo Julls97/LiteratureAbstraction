@@ -7,7 +7,7 @@ namespace LiteratureAbstraction {
 		public int bday { get; private set; }
 		public int deathDay { get; private set; }
 		public List<Work> works;
-		
+
 		int life {
 			get { return deathDay - bday; }
 		}

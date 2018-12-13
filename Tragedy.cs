@@ -5,12 +5,9 @@ namespace LiteratureAbstraction {
 		public List<string> actions { get; set; }
 		public List<string> dialogs { get; set; }
 		public List<string> remarks { get; set; }
-		public int countOfCharacters { get; }
-		public int countOfActions { get; }
-		public int countOfDialogs { get; }
-		public int countOfRemarks { get; }
 
-		public string conflict;
-		public Character hero;
+		public string conflict { get; set; }
+		public Character hero { get; set; }
+		public override List<Character> characters { get; set; }
 	}
 }

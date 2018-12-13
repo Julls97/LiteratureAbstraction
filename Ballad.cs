@@ -7,5 +7,10 @@ namespace LiteratureAbstraction {
 		public int countOfEvents { get; }
 		public string sizeOfVerse { get; set; }
 		public string rhyme { get; set; }
+		public override List<Character> characters { get; set; }
+
+		public string plot;
+		public string culmination;
+		public string conclusion;
 	}
 }
