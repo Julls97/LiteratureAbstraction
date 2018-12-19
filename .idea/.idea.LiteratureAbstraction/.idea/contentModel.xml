@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Юлия\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_LiteratureAbstraction.-601003205.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Юлия\RiderProjects\LiteratureAbstraction" t="IncludeRecursive">
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.2/system/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_LiteratureAbstraction.-1668112713.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Author.cs" t="Include" />
       <e p="Ballad.cs" t="Include" />
-      <e p="bin" t="ExcludeRecursive" />
       <e p="Character.cs" t="Include" />
       <e p="Comedy.cs" t="Include" />
       <e p="Drama.cs" t="Include" />
@@ -16,6 +17,14 @@
       <e p="LiteratureAbstraction.csproj" t="IncludeRecursive" />
       <e p="LiteratureAbstraction.sln" t="IncludeFlat" />
       <e p="Novel.cs" t="Include" />
+      <e p="Ode.cs" t="Include" />
+      <e p="Poem.cs" t="Include" />
+      <e p="Program.cs" t="Include" />
+      <e p="Story.cs" t="Include" />
+      <e p="Tragedy.cs" t="Include" />
+      <e p="Work.cs" t="Include" />
+      <e p="WorkCollection.cs" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp2.0" t="Include">
@@ -23,14 +32,7 @@
           </e>
         </e>
       </e>
-      <e p="Ode.cs" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Poem.cs" t="Include" />
-      <e p="Program.cs" t="Include" />
-      <e p="Story.cs" t="Include" />
-      <e p="Tragedy.cs" t="Include" />
-      <e p="Work.cs" t="Include" />
-      <e p="WorkCollection.cs" t="Include" />
     </e>
   </component>
 </project>

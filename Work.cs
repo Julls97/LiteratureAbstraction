@@ -5,8 +5,7 @@ namespace LiteratureAbstraction {
 	public abstract class Work {
 		public Author author { get; private set; }
 		public DateTime date { get; set; }
-		public string name { get; private set; }
-		public string genre { get; private set; }
+		public string name { get; set; }
 		public string kind { get; private set; }
 		public abstract List<Character> characters { get; set; }
 
