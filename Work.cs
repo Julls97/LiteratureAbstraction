@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace LiteratureAbstraction {
 	public abstract class Work {
 		public Author author { get; private set; }
-		public DateTime year { get; set; }
+		public DateTime date { get; set; }
 		public string name { get; set; }
 		public abstract List<Character> characters { get; set; }
 
+
+		private CultureInfo provider = CultureInfo.InvariantCulture;
+
+		public int Year {
+			get { return date.Year; }
+			set {
+				date = new DateTime();
+				date.AddYears(value);
+			}
+		}
+
 		public virtual string GetDescription() {
-			string s =  "Дорогой читатель! Ты держишь в руках книгу " + name + ", которую написал " +
-			       author.firstName + " " + author.lastName +
-			       ". Это произведение было написано в " + year.Year +
-			       " году. В этой книге ты прочитаешь про ";
+			string s = "";
 			return s;
 		}
 
@@ -21,9 +30,9 @@ namespace LiteratureAbstraction {
 			return String.Compare(author.lastName, other.author.lastName, StringComparison.Ordinal);
 		}
 
-		public Work(Author author, DateTime year, string name) {
+		public Work(Author author, DateTime date, string name) {
 			this.author = author;
-			this.year = year;
+			this.date = date;
 			this.name = name;
 		}
 

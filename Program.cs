@@ -11,20 +11,20 @@ namespace LiteratureAbstraction {
 			Author Zhukovsky = new Author("Василий", "Жуковский", 1783, 1852);
 			Author Dostoevsky = new Author("Фёдор Михайлович", "Достоевский", 1821, 1881);		
 
-			Work RomeoAndJuliet = new Tragedy(Shakespeare, new DateTime(1595), "Ромео и Джульетта");
-			Work TheTamingOfTheShrew = new Comedy(Shakespeare, new DateTime(1593), "Укрощение строптивой");
-			Work Thunderstorm = new Drama(Ostrovsky, new DateTime(1859), "Гроза");			
-			Work AHeroOfOurTime = new Novel(Lermontov, new DateTime(1840), "Герой нашего времени");			
-			Work PoorFolk = new Novel(Dostoevsky, new DateTime(1846), "Бедные люди"); // Devushkin Dobroselova Mr. Bykov
-			Work Demons = new Novel(Dostoevsky, new DateTime(1871), "Бесы"); // Verkhovensky Stavrogina  Stavrogin Shatov Kirillov
-			Work TheBrothersKaramazov  = new Novel(Dostoevsky, new DateTime(1880), "Братья Карамазовы "); // Fyodor Karamazov // Dmitri Fyodorovich Karamazov // Ivan Fyodorovich Karamazov // Alexei Fyodorovich Karamazov 
-			Work TheIdiot  = new Novel(Dostoevsky, new DateTime(1869), "Идиот"); // Prince Myshkin Nastasya Filippovna Rogózhin Ippolít Teréntyev 
-			Work CrimeAndPunishment = new Novel(Dostoevsky, new DateTime(1866), "Преступление и наказание"); // Raskolnikov (Rodion) // Sofya Semyonovna Marmeladova // Razumikhin Svidrigaïlov
-			Work Borodino = new Poem(Lermontov, new DateTime(1837), "Бородино");
-			Work TheQueenOfSpades = new Story(Pushkin, new DateTime(1833), "Пиковая дама");
-			Work Monument = new Ode(Pushkin, new DateTime(1836), "Я памятник себе воздвиг нерукотворный");
-			Work Elegy = new Elegy(Pushkin, new DateTime(1830), "Безумных лет угасшее веселье");
-			Work Svetlana = new Ballad(Zhukovsky, new DateTime(1813), "Раз в крещенский вечерок Девушки гадали");
+			Work RomeoAndJuliet = new Tragedy(Shakespeare, 1595, "Ромео и Джульетта");
+			Work TheTamingOfTheShrew = new Comedy(Shakespeare, 1593, "Укрощение строптивой");
+			Work Thunderstorm = new Drama(Ostrovsky, 1859, "Гроза");			
+			Work AHeroOfOurTime = new Novel(Lermontov, 1840, "Герой нашего времени");			
+			Work PoorFolk = new Novel(Dostoevsky, 1846, "Бедные люди"); // Devushkin Dobroselova Mr. Bykov
+			Work Demons = new Novel(Dostoevsky, 1871, "Бесы"); // Verkhovensky Stavrogina  Stavrogin Shatov Kirillov
+			Work TheBrothersKaramazov  = new Novel(Dostoevsky, 1880, "Братья Карамазовы "); // Fyodor Karamazov // Dmitri Fyodorovich Karamazov // Ivan Fyodorovich Karamazov // Alexei Fyodorovich Karamazov 
+			Work TheIdiot  = new Novel(Dostoevsky, 1869, "Идиот"); // Prince Myshkin Nastasya Filippovna Rogózhin Ippolít Teréntyev 
+			Work CrimeAndPunishment = new Novel(Dostoevsky, 1866, "Преступление и наказание"); // Raskolnikov (Rodion) // Sofya Semyonovna Marmeladova // Razumikhin Svidrigaïlov
+			Work Borodino = new Poem(Lermontov, 1837, "Бородино");
+			Work TheQueenOfSpades = new Story(Pushkin, 1833, "Пиковая дама");
+			Work Monument = new Ode(Pushkin, 1836, "Я памятник себе воздвиг нерукотворный");
+			Work Elegy = new Elegy(Pushkin, 1830, "Безумных лет угасшее веселье");
+			Work Svetlana = new Ballad(Zhukovsky, 1813, "Раз в крещенский вечерок Девушки гадали");
 
 			Character Raskolnikov = new Character("Родион Раскольников");
 			CrimeAndPunishment.characters = new List<Character>() {Raskolnikov};
@@ -53,20 +53,19 @@ namespace LiteratureAbstraction {
 			works.Add(Elegy);
 			works.Add(Svetlana);
 
-
 			Console.WriteLine(CrimeAndPunishment.GetDescription());
 			Console.WriteLine(Borodino.GetDescription());
 			
-			works.Sort((x, y) => { return x.year > y.year; });
+			works.Sort((x, y) => { return x.date > y.date; });
 			var selectNovel = works.Select(SelectNovel);
 			foreach (var item in selectNovel) {
 				Console.WriteLine(item.name);
 			}
-//			works.ChangeAll(x => { x.year = x.year; });
+			works.ChangeAll(x => { x.date = x.date; });
 		}
 
 		public static bool SelectByDate(Drama item) {
-			return item.year > DateTime.Now.Add(TimeSpan.FromMinutes(2));
+			return item.date > DateTime.Now.Add(TimeSpan.FromMinutes(2));
 		}
 		
 		public static bool SelectNovel(Work item) {

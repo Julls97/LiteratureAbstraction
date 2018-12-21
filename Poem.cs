@@ -26,7 +26,7 @@ namespace LiteratureAbstraction {
 		public override string GetDescription() {
 			string s = "Дорогой читатель! Ты держишь в руках книгу " + name + ", которую написал " +
 			           author.firstName + " " + author.lastName +
-			           ". Это произведение было написано в " + year.Year +
+			           ". Это произведение было написано в " + Year +
 			           " году. В этой книге основным является ";
 
 			string s1 = "лиpичecкий гepoй – этo oбpaз пoэтa (eгo лиpичecкoe Я), " +
