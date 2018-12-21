@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LiteratureAbstraction {
 	public enum PoemTypes {
@@ -17,5 +18,11 @@ namespace LiteratureAbstraction {
 		public string rhyme { get; set; }
 		public override List<Character> characters { get; set; }
 		public PoemTypes poemType { get; set; }
+
+		public Poem(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		}
+
+		public Poem(Author author) : base(author) {
+		}
 	}
 }

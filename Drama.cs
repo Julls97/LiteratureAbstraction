@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LiteratureAbstraction {
 	public enum SubGenres {
@@ -17,5 +18,11 @@ namespace LiteratureAbstraction {
 
 		public SubGenres subGenre { get; set; }
 		public override List<Character> characters { get; set; }
+
+		public Drama(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		}
+
+		public Drama(Author author) : base(author) {
+		}
 	}
 }

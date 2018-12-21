@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LiteratureAbstraction {
 	class Story : Work, IEpic {
@@ -21,6 +22,12 @@ namespace LiteratureAbstraction {
 			if (characters.Count > 3)
 				throw new System.ArgumentException("Too many characters yet!");
 			characters.Add(person);
+		}
+
+		public Story(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		}
+
+		public Story(Author author) : base(author) {
 		}
 	}
 }

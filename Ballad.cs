@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LiteratureAbstraction {
 	class Ballad : Work, IEpic, ILyric {
@@ -12,5 +13,11 @@ namespace LiteratureAbstraction {
 		public string plot;
 		public string culmination;
 		public string conclusion;
+
+		public Ballad(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		}
+
+		public Ballad(Author author) : base(author) {
+		}
 	}
 }

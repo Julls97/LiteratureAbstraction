@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LiteratureAbstraction {
 	public enum HistoricalForms {
@@ -17,5 +18,11 @@ namespace LiteratureAbstraction {
 
 		public HistoricalForms historicalForm { get; set; }
 		public override List<Character> characters { get; set; }
+
+		public Novel(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		}
+
+		public Novel(Author author) : base(author) {
+		}
 	}
 }

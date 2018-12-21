@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LiteratureAbstraction {
 	public enum ComedyType {
@@ -14,5 +15,11 @@ namespace LiteratureAbstraction {
 		public ComedyType comedyTypes { get; set; }
 		public List<string> jokes { get; set; }
 		public override List<Character> characters { get; set; }
+
+		public Comedy(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		}
+
+		public Comedy(Author author) : base(author) {
+		}
 	}
 }

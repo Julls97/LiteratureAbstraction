@@ -11,5 +11,24 @@ namespace LiteratureAbstraction {
 		int life {
 			get { return deathDay - bday; }
 		}
+
+		public Author(string firstName, string lastName, int bday, int deathDay) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.bday = bday;
+			this.deathDay = deathDay;
+		}
+
+		public Author(List<Work> works, string firstName, string lastName, int bday, int deathDay) {
+			this.works = works;
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.bday = bday;
+			this.deathDay = deathDay;
+		}
+
+		public Author(List<Work> works) {
+			this.works = works;
+		}
 	}
 }

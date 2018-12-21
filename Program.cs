@@ -5,9 +5,30 @@ using System.Linq;
 namespace LiteratureAbstraction {
 	public class Program {
 		static void Main(string[] args) {
+		
+			Author Shakespeare = new Author("William", "Shakespeare", 1564, 1616);
+			
+			Work RomeoAndJuliet = new Tragedy(Shakespeare, new DateTime(1595), "Ромео и Джульетта", "какой-то");	
+			Work TheTamingOfTheShrew = new Comedy(Shakespeare, new DateTime(1593), "Укрощение строптивой", "какой-то");
+	
+			Character Romeo = new Character();
+			Character Juliet = new Character();
+			RomeoAndJuliet.characters = new List<Character>(){ Romeo, Juliet};	
+			
+			Character Katarina = new Character();
+			Character Petruchio  = new Character();
+			TheTamingOfTheShrew.characters = new List<Character>(){ Katarina, Petruchio};
+			
+			
+			
+			
+			
+			
+			
+			
 			var dramas = new WorkCollection<Drama>();
 			for (int i = 0; i < 10; i++) {
-				Drama drama = new Drama();
+				Drama drama = new Drama(Shakespeare);
 				//drama.author.bday.
 				var random = new Random();
 				drama.date = DateTime.Now.Add(new TimeSpan(random.Next()));

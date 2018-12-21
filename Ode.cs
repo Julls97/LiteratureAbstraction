@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LiteratureAbstraction {
 	public enum OdaTypes { //  В литературе различают оды хвалебные, праздничные, плачевные.
@@ -17,5 +18,11 @@ namespace LiteratureAbstraction {
 		public string Introduction { get; set; }
 		public string Reasoning { get; set; }
 		public string Conclusion { get; set; }
+
+		public Ode(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		}
+
+		public Ode(Author author) : base(author) {
+		}
 	}
 }
