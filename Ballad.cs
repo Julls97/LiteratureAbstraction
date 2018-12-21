@@ -14,7 +14,7 @@ namespace LiteratureAbstraction {
 		public string culmination;
 		public string conclusion;
 
-		public Ballad(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		public Ballad(Author author, DateTime year, string name) : base(author, year, name) {
 		}
 
 		public Ballad(Author author) : base(author) {

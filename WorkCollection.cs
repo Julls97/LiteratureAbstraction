@@ -29,8 +29,7 @@ namespace LiteratureAbstraction {
 
 		public bool IsReadOnly { get; }
 
-		public new IEnumerator<T> GetEnumerator()
-		{
+		public new IEnumerator<T> GetEnumerator() {
 			foreach (T o in this.List)
 				yield return o;
 		}
@@ -38,8 +37,8 @@ namespace LiteratureAbstraction {
 		public T this[int i] {
 			get { return (T) List[i]; }
 			set { List[i] = value; }
-		}	
-	
+		}
+
 
 		public void Sort(Func<T, T, bool> res) {
 			bool mySort;
@@ -57,14 +56,13 @@ namespace LiteratureAbstraction {
 		}
 
 		public delegate bool SelectDelegate(T item);
-		
+
 		public WorkCollection<T> Select(SelectDelegate selectDelegate) {
 			WorkCollection<T> workCollection = new WorkCollection<T>();
 			foreach (var item in this) {
 				bool isSelect = selectDelegate(item);
-				if(isSelect) workCollection.Add(item);
+				if (isSelect) workCollection.Add(item);
 			}
-
 			return workCollection;
 		}
 

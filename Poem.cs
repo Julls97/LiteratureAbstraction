@@ -19,10 +19,25 @@ namespace LiteratureAbstraction {
 		public override List<Character> characters { get; set; }
 		public PoemTypes poemType { get; set; }
 
-		public Poem(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
-		}
 
-		public Poem(Author author) : base(author) {
+		public Poem(Author author, DateTime year, string name) : base(author, year, name) {}
+		public Poem(Author author) : base(author) {}
+
+		public override string GetDescription() {
+			string s = "Дорогой читатель! Ты держишь в руках книгу " + name + ", которую написал " +
+			           author.firstName + " " + author.lastName +
+			           ". Это произведение было написано в " + year.Year +
+			           " году. В этой книге основным является ";
+
+			string s1 = "лиpичecкий гepoй – этo oбpaз пoэтa (eгo лиpичecкoe Я), " +
+			            "чьи пepeживaния, мыcли и чyвcтвa oтpaжeны в лиpичecкoм пpoизвeдeнии. " +
+			            "Лиpичecкий гepoй нe тoждecтвeн биoгpaфичecкoй личнocти. " +
+			            "Пpeдcтaвлeниe o гepoe лиpичecкoм нocит cyммapный xapaктep и фopмиpyeтcя " +
+			            "в пpoцecce пpиoбщeния к тoмy внyтpeннeмy миpy, кoтopый pacкpывaeтcя " +
+			            "в лиpичecкиx пpoизвeдeнияx нe чepeз пocтyпки, a чepeз пepeживaния, " +
+			            "дyшeвныe cocтoяния, мaнepy peчeвoгo caмoвыpaжeния.";
+
+			return s + s1;
 		}
 	}
 }

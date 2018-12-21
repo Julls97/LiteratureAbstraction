@@ -26,9 +26,5 @@ namespace LiteratureAbstraction {
 			this.bday = bday;
 			this.deathDay = deathDay;
 		}
-
-		public Author(List<Work> works) {
-			this.works = works;
-		}
 	}
 }

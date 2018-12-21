@@ -1,55 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace LiteratureAbstraction {
 	public class Program {
 		static void Main(string[] args) {
-		
-			Author Shakespeare = new Author("William", "Shakespeare", 1564, 1616);
+			Author Shakespeare = new Author("Уильям", "Шекспир", 1564, 1616);
+			Author Ostrovsky = new Author("Александр", "Островский", 1823, 1886);
+			Author Lermontov = new Author("Михаил", "Лермонтов", 1823, 1886);
+			Author Pushkin = new Author("Александр", "Пушкин", 1799, 1837);
+			Author Zhukovsky = new Author("Василий", "Жуковский", 1783, 1852);
+			Author Dostoevsky = new Author("Фёдор Михайлович", "Достоевский", 1821, 1881);		
+
+			Work RomeoAndJuliet = new Tragedy(Shakespeare, new DateTime(1595), "Ромео и Джульетта");
+			Work TheTamingOfTheShrew = new Comedy(Shakespeare, new DateTime(1593), "Укрощение строптивой");
+			Work Thunderstorm = new Drama(Ostrovsky, new DateTime(1859), "Гроза");			
+			Work AHeroOfOurTime = new Novel(Lermontov, new DateTime(1840), "Герой нашего времени");			
+			Work PoorFolk = new Novel(Dostoevsky, new DateTime(1846), "Бедные люди"); // Devushkin Dobroselova Mr. Bykov
+			Work Demons = new Novel(Dostoevsky, new DateTime(1871), "Бесы"); // Verkhovensky Stavrogina  Stavrogin Shatov Kirillov
+			Work TheBrothersKaramazov  = new Novel(Dostoevsky, new DateTime(1880), "Братья Карамазовы "); // Fyodor Karamazov // Dmitri Fyodorovich Karamazov // Ivan Fyodorovich Karamazov // Alexei Fyodorovich Karamazov 
+			Work TheIdiot  = new Novel(Dostoevsky, new DateTime(1869), "Идиот"); // Prince Myshkin Nastasya Filippovna Rogózhin Ippolít Teréntyev 
+			Work CrimeAndPunishment = new Novel(Dostoevsky, new DateTime(1866), "Преступление и наказание"); // Raskolnikov (Rodion) // Sofya Semyonovna Marmeladova // Razumikhin Svidrigaïlov
+			Work Borodino = new Poem(Lermontov, new DateTime(1837), "Бородино");
+			Work TheQueenOfSpades = new Story(Pushkin, new DateTime(1833), "Пиковая дама");
+			Work Monument = new Ode(Pushkin, new DateTime(1836), "Я памятник себе воздвиг нерукотворный");
+			Work Elegy = new Elegy(Pushkin, new DateTime(1830), "Безумных лет угасшее веселье");
+			Work Svetlana = new Ballad(Zhukovsky, new DateTime(1813), "Раз в крещенский вечерок Девушки гадали");
+
+			Character Raskolnikov = new Character("Родион Раскольников");
+			CrimeAndPunishment.characters = new List<Character>() {Raskolnikov};
 			
-			Work RomeoAndJuliet = new Tragedy(Shakespeare, new DateTime(1595), "Ромео и Джульетта", "какой-то");	
-			Work TheTamingOfTheShrew = new Comedy(Shakespeare, new DateTime(1593), "Укрощение строптивой", "какой-то");
-	
 			Character Romeo = new Character();
 			Character Juliet = new Character();
-			RomeoAndJuliet.characters = new List<Character>(){ Romeo, Juliet};	
-			
+			RomeoAndJuliet.characters = new List<Character>() {Romeo, Juliet};
+
 			Character Katarina = new Character();
-			Character Petruchio  = new Character();
-			TheTamingOfTheShrew.characters = new List<Character>(){ Katarina, Petruchio};
+			Character Petruchio = new Character();
+			TheTamingOfTheShrew.characters = new List<Character>() {Katarina, Petruchio};
+
+			var works = new WorkCollection<Work>();
+			works.Add(RomeoAndJuliet);
+			works.Add(TheTamingOfTheShrew);
+			works.Add(Thunderstorm);
+			works.Add(AHeroOfOurTime);
+			works.Add(PoorFolk);
+			works.Add(Demons);
+			works.Add(TheBrothersKaramazov);
+			works.Add(TheIdiot);
+			works.Add(CrimeAndPunishment);
+			works.Add(Borodino);
+			works.Add(TheQueenOfSpades);
+			works.Add(Monument);
+			works.Add(Elegy);
+			works.Add(Svetlana);
+
+
+			Console.WriteLine(CrimeAndPunishment.GetDescription());
+			Console.WriteLine(Borodino.GetDescription());
 			
-			
-			
-			
-			
-			
-			
-			
-			var dramas = new WorkCollection<Drama>();
-			for (int i = 0; i < 10; i++) {
-				Drama drama = new Drama(Shakespeare);
-				//drama.author.bday.
-				var random = new Random();
-				drama.date = DateTime.Now.Add(new TimeSpan(random.Next()));
-				dramas.Add(drama);
+			works.Sort((x, y) => { return x.year > y.year; });
+			var selectNovel = works.Select(SelectNovel);
+			foreach (var item in selectNovel) {
+				Console.WriteLine(item.name);
 			}
-
-			dramas.Sort((x, y) => { return x.date > y.date; });
-			var selectDramas = dramas.Select(SelectByDate);
-			dramas.ChangeAll(x => { x.name = "vasya"; });
-			Console.WriteLine(dramas);
-			//dramas.Select(x => { x.gameobject})
-//			List<Transfrom> transfroms = new List<Transfrom>();
-//			List<Position> positions = transfroms.Select(x => x.position).ToList();
-//		}
+//			works.ChangeAll(x => { x.year = x.year; });
 		}
 
-		public static void bla(Drama d) {
-			d.name = "vasya";
-		}
 		public static bool SelectByDate(Drama item) {
-			return item.date > DateTime.Now.Add(TimeSpan.FromMinutes(2));
+			return item.year > DateTime.Now.Add(TimeSpan.FromMinutes(2));
+		}
+		
+		public static bool SelectNovel(Work item) {
+			return item is Novel;
 		}
 	}
 }

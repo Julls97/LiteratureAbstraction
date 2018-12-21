@@ -19,7 +19,7 @@ namespace LiteratureAbstraction {
 		public SubGenres subGenre { get; set; }
 		public override List<Character> characters { get; set; }
 
-		public Drama(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		public Drama(Author author, DateTime year, string name) : base(author, year, name) {
 		}
 
 		public Drama(Author author) : base(author) {

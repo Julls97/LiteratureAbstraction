@@ -11,7 +11,7 @@ namespace LiteratureAbstraction {
 		public Character hero { get; set; }
 		public override List<Character> characters { get; set; }
 
-		public Tragedy(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+		public Tragedy(Author author, DateTime year, string name) : base(author, year, name) {
 		}
 
 		public Tragedy(Author author) : base(author) {

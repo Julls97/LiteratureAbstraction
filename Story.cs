@@ -13,18 +13,19 @@ namespace LiteratureAbstraction {
 		public List<Character> Persons {
 			set {
 				if (value.Count > 3)
-					throw new System.ArgumentException("Too many characters! Only less than 3.");
+					throw new ArgumentException("Too many characters! Only less than 3.");
 				characters = value;
 			}
 		}
 
 		public void AddPersons(Character person) {
 			if (characters.Count > 3)
-				throw new System.ArgumentException("Too many characters yet!");
+				throw new ArgumentException("Too many characters yet!");
 			characters.Add(person);
 		}
 
-		public Story(Author author, DateTime date, string name, string kind) : base(author, date, name, kind) {
+
+		public Story(Author author, DateTime year, string name) : base(author, year, name) {
 		}
 
 		public Story(Author author) : base(author) {
