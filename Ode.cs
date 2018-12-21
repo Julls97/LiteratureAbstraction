@@ -21,7 +21,7 @@ namespace LiteratureAbstraction {
 		public string Conclusion { get; set; }
 
 
-		public Ode(Author author, DateTime year, string name) : base(author, year, name) {
+		public Ode(Author author, int year, string name) : base(author, year, name) {
 		}
 
 		public Ode(Author author) : base(author) {

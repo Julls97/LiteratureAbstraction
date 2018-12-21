@@ -19,7 +19,7 @@ namespace LiteratureAbstraction {
 
 		public ElegyTypes elegyType { get; set; }
 
-		public Elegy(Author author, DateTime year, string name) : base(author, year, name) {
+		public Elegy(Author author, int year, string name) : base(author, year, name) {
 		}
 
 		public Elegy(Author author) : base(author) {

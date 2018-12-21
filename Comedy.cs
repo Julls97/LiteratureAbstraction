@@ -16,7 +16,7 @@ namespace LiteratureAbstraction {
 		public List<string> jokes { get; set; }
 		public override List<Character> characters { get; set; }
 
-		public Comedy(Author author, DateTime year, string name) : base(author, year, name) {
+		public Comedy(Author author, int year, string name) : base(author, year, name) {
 		}
 
 		public Comedy(Author author) : base(author) {

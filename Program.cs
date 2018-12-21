@@ -54,18 +54,15 @@ namespace LiteratureAbstraction {
 			works.Add(Svetlana);
 
 			Console.WriteLine(CrimeAndPunishment.GetDescription());
-			Console.WriteLine(Borodino.GetDescription());
+			Console.WriteLine("\n" + Borodino.GetDescription());
 			
 			works.Sort((x, y) => { return x.date > y.date; });
 			var selectNovel = works.Select(SelectNovel);
+			Console.WriteLine("\nNovels:");
 			foreach (var item in selectNovel) {
 				Console.WriteLine(item.name);
 			}
-			works.ChangeAll(x => { x.date = x.date; });
-		}
-
-		public static bool SelectByDate(Drama item) {
-			return item.date > DateTime.Now.Add(TimeSpan.FromMinutes(2));
+			works.ChangeAll(x => { x.name = x.name + "."; });
 		}
 		
 		public static bool SelectNovel(Work item) {

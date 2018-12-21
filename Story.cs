@@ -25,7 +25,7 @@ namespace LiteratureAbstraction {
 		}
 
 
-		public Story(Author author, DateTime year, string name) : base(author, year, name) {
+		public Story(Author author, int year, string name) : base(author, year, name) {
 		}
 
 		public Story(Author author) : base(author) {
